@@ -44,11 +44,11 @@ fi
 echo "Interval:" $interval
 echo "Number:" $number
 
-for ((n=1;n<=$number;n++)); do
+for ((x=1;x<=$number;x++)); do
 	${ARGS[@]} 2>/dev/null
 	if [ $? != 0 ]; then
-		echo $n "attempt fialed"
-		if [ $n -lt $number ]; then
+		echo $x "attempt fialed"
+		if [ $x -lt $number ]; then
 		sleep $interval
 		fi
 	else
